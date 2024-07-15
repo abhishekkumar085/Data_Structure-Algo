@@ -5,7 +5,6 @@ function UpperBound(arr, x) {
   let ans = arr.length;
   while (start <= end) {
     let mid = start + Math.floor((end - start) / 2);
-
     if (arr[mid] <= x) {
       start = mid + 1;
     } else {
