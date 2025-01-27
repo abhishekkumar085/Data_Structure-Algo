@@ -1,0 +1,100 @@
+1.Max Subarray using Kadans algorithm
+public class Main {
+    public static int findMaxSum(int[] arr) {
+        int currsum = 0;
+        int mxsum = Integer.MIN_VALUE;
+        boolean allNegative = true; // Flag to check if all values are negative
+        int maxNegative = Integer.MIN_VALUE; // Variable to track max negative number
+
+        for (int i = 0; i < arr.length; i++) {
+            // Track the max negative value
+            if (arr[i] < 0) {
+                maxNegative = Math.max(maxNegative, arr[i]);
+            }
+
+            // Add current element to currsum
+            currsum += arr[i];
+
+            // If current sum becomes negative, reset it to 0
+            if (currsum < 0) {
+                currsum = 0;
+            }
+
+            // Update mxsum if currsum is greater than mxsum
+            mxsum = Math.max(mxsum, currsum);
+        }
+
+        // If all elements are negative, return the maximum negative value
+        if (mxsum == 0) {
+            return maxNegative;
+        }
+
+        return mxsum;
+    }
+
+    public static void main(String[] args) {
+        int arr[] = {-1, -2, -3, 4};  // Example with all negative values
+        System.out.println("Max sum is: " + findMaxSum(arr));
+    }
+}
+
+
+2. This is Algo
+Kadane's Algorithm: Short Explanation
+Kadane's Algorithm is used to find the maximum sum of a contiguous subarray within a one-dimensional numerical array. It efficiently computes the solution in O(n) time, where n is the length of the array.
+
+Key Idea:
+As you iterate through the array, maintain two variables:
+current_sum: The maximum sum of the subarray that ends at the current index.
+max_sum: The maximum sum found so far, which stores the largest sum encountered during the iteration.
+For each element in the array:
+Add the current element to current_sum.
+If adding the element makes the sum negative, reset current_sum to 0, indicating that it's better to start a new subarray from the next element.
+Continuously update max_sum with the maximum of max_sum and current_sum.
+Algorithm Steps:
+Initialize max_sum to a very small value (or the first element) and current_sum to 0.
+Iterate through the array:
+Update current_sum to either current_sum + arr[i] or arr[i] (whichever is larger).
+Update max_sum as max(max_sum, current_sum).
+At the end, max_sum will contain the maximum sum of any contiguous subarray.
+Kadane’s Algorithm in Pseudocode:
+pseudo
+Copy
+function kadane(arr):
+    max_sum = -infinity      // Initialize max_sum to a very small value
+    current_sum = 0         // Initialize current_sum to 0
+
+    for each element in arr:
+        current_sum = max(element, current_sum + element)  // Choose to start a new subarray or add the element to the current subarray
+        max_sum = max(max_sum, current_sum)  // Update max_sum if current_sum is larger
+    
+    return max_sum
+Example Walkthrough:
+For the array arr = [-2, 1, -3, 4, -1, 2, 1, -5, 4]:
+
+Initialize max_sum = -infinity, current_sum = 0.
+Iterating through the array:
+current_sum = max(-2, 0 + (-2)) = -2, update max_sum = max(-infinity, -2) = -2.
+current_sum = max(1, -2 + 1) = 1, update max_sum = max(-2, 1) = 1.
+current_sum = max(-3, 1 + (-3)) = -2, update max_sum = max(1, -2) = 1.
+current_sum = max(4, -2 + 4) = 4, update max_sum = max(1, 4) = 4.
+Continue this process until the end.
+Final result: max_sum = 6 (which corresponds to the subarray [4, -1, 2, 1]).
+Time and Space Complexity:
+Time Complexity: 
+𝑂
+(
+𝑛
+)
+O(n) where n is the length of the array. The array is traversed only once.
+Space Complexity: 
+𝑂
+(
+1
+)
+O(1) because only a few variables are used.
+Summary:
+Kadane’s Algorithm efficiently finds the maximum sum of a contiguous subarray in linear time by dynamically updating the sum and tracking the largest subarray sum encountered during the iteration.
+
+
+

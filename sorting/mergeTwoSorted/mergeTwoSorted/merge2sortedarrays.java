@@ -1,3 +1,4 @@
+package mergeTwoSorted;
 public class merge2sortedarrays {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         // actual length of nums1 is m+n, which we will use to store the final result
@@ -39,7 +40,5 @@ public class merge2sortedarrays {
             nums1[k] = result[k];
             k++;
         }
-
-
     }
 }
