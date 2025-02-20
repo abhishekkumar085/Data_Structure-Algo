@@ -6,6 +6,48 @@
   "configurations": [
     {
       "type": "java",
+      "name": "DiagonalSum",
+      "request": "launch",
+      "mainClass": "ArrayProblem.DiagonalSum",
+      "projectName": "DSA_82c63718"
+    },
+    {
+      "type": "java",
+      "name": "TwoDArray",
+      "request": "launch",
+      "mainClass": "ArrayProblem.TwoDArray",
+      "projectName": "DSA_82c63718"
+    },
+    {
+      "type": "java",
+      "name": "ReverseWords",
+      "request": "launch",
+      "mainClass": "Strings.ReverseWords",
+      "projectName": "DSA_82c63718"
+    },
+    {
+      "type": "java",
+      "name": "RemoveOutermostParanthesis",
+      "request": "launch",
+      "mainClass": "Strings.RemoveOutermostParanthesis",
+      "projectName": "DSA_82c63718"
+    },
+    {
+      "type": "java",
+      "name": "TwoSum",
+      "request": "launch",
+      "mainClass": "TwoSum.TwoSum",
+      "projectName": "DSA_82c63718"
+    },
+    {
+      "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "LMSLLD.Main",
+      "projectName": "DSA_82c63718"
+    },
+    {
+      "type": "java",
       "name": "InsertAtHead",
       "request": "launch",
       "mainClass": "LinkedList.LinkList.InsertAtHead",
