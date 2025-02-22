@@ -6,6 +6,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "NextPermutation",
+      "request": "launch",
+      "mainClass": "ArrayProblem.NextPermutation",
+      "projectName": "DSA_82c63718"
+    },
+    {
+      "type": "java",
+      "name": "Test",
+      "request": "launch",
+      "mainClass": "LMSLLD.Test",
+      "projectName": "DSA_82c63718"
+    },
+    {
+      "type": "java",
       "name": "DiagonalSum",
       "request": "launch",
       "mainClass": "ArrayProblem.DiagonalSum",
