@@ -130,16 +130,18 @@ class PrintLength {
     }
 
     public static void main(String[] args) {
-        String str = "Hello World!";
+        String str = "HelloWorld!";
         String str1 = "Hello!";
         String str2 = "Hello!";
         char k = 'c';
+        int stars[] = { 2, 5, 7, 9 };
         // System.out.println("Length of the string is: " + str.length());
         // System.out.println("Length of the string is: " + getLength(str));
-        // System.out.println("Both Sts
+        // System.out.println("is Both Strings Equal: " + isEqual(str1, str2));
         // System.out.println(searchCharInString(str1, k));
         // System.out.println(insertcharOnPos(str1, 6, k));
         System.out.println(removeStringFromPos(str1, 1));
         System.out.println(removeCharfromStringWithPos(str1, 1));
+        System.out.println(addStar(str, stars));
     }
 }

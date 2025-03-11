@@ -6,6 +6,34 @@
   "configurations": [
     {
       "type": "java",
+      "name": "LinkedListClass",
+      "request": "launch",
+      "mainClass": "LinkedList.LinkedListClass",
+      "projectName": "DSA_82c63718"
+    },
+    {
+      "type": "java",
+      "name": "MoveZeroAtEnd",
+      "request": "launch",
+      "mainClass": "ArrayProblem.MoveZeroAtEnd",
+      "projectName": "DSA_82c63718"
+    },
+    {
+      "type": "java",
+      "name": "SuperiorElement",
+      "request": "launch",
+      "mainClass": "ArrayProblem.SuperiorElement",
+      "projectName": "DSA_82c63718"
+    },
+    {
+      "type": "java",
+      "name": "GenerateAllPermutation",
+      "request": "launch",
+      "mainClass": "ArrayProblem.GenerateAllPermutation",
+      "projectName": "DSA_82c63718"
+    },
+    {
+      "type": "java",
       "name": "NextPermutation",
       "request": "launch",
       "mainClass": "ArrayProblem.NextPermutation",
