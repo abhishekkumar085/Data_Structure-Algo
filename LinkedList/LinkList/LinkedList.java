@@ -107,7 +107,8 @@ class LinkedList {
     boolean search(int key) {
         Node temp = head;
         while (temp != null) {
-            if (temp.data == key) return true;
+            if (temp.data == key)
+                return true;
             temp = temp.next;
         }
         return false;
@@ -117,8 +118,8 @@ class LinkedList {
     void reverse() {
         Node prev = null, current = head, next;
         while (current != null) {
-            next = current.next;  // Store next node
-            current.next = prev;  // Reverse pointer
+            next = current.next; // Store next node
+            current.next = prev; // Reverse pointer
             prev = current;
             current = next;
         }
@@ -129,9 +130,10 @@ class LinkedList {
     boolean detectCycle() {
         Node slow = head, fast = head;
         while (fast != null && fast.next != null) {
-            slow = slow.next;           // Moves one step
-            fast = fast.next.next;      // Moves two steps
-            if (slow == fast) return true; // Cycle detected
+            slow = slow.next; // Moves one step
+            fast = fast.next.next; // Moves two steps
+            if (slow == fast)
+                return true; // Cycle detected
         }
         return false;
     }
@@ -146,6 +148,8 @@ class LinkedList {
         System.out.println("null");
     }
 
+    // Sort Linked List
+
     public static void main(String[] args) {
         LinkedList list = new LinkedList();
 
@@ -154,17 +158,17 @@ class LinkedList {
         list.insertAtEnd(20);
         list.insertAtBeginning(5);
         list.insertAtPosition(15, 3);
-        list.printList();  // Output: 5 -> 10 -> 15 -> 20 -> null
+        list.printList(); // Output: 5 -> 10 -> 15 -> 20 -> null
 
         // Deletion
         list.deleteFromBeginning();
-        list.printList();  // Output: 10 -> 15 -> 20 -> null
+        list.printList(); // Output: 10 -> 15 -> 20 -> null
 
         list.deleteFromEnd();
-        list.printList();  // Output: 10 -> 15 -> null
+        list.printList(); // Output: 10 -> 15 -> null
 
         list.deleteFromPosition(2);
-        list.printList();  // Output: 10 -> null
+        list.printList(); // Output: 10 -> null
 
         // Searching
         System.out.println("Search 10: " + list.search(10)); // Output: true
@@ -173,8 +177,8 @@ class LinkedList {
         // Reversal
         list.insertAtEnd(30);
         list.insertAtEnd(40);
-        list.printList();  // Output: 10 -> 30 -> 40 -> null
+        list.printList(); // Output: 10 -> 30 -> 40 -> null
         list.reverse();
-        list.printList();  // Output: 40 -> 30 -> 10 -> null
+        list.printList(); // Output: 40 -> 30 -> 10 -> null
     }
 }
