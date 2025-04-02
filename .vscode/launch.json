@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "ReviseLL",
+      "request": "launch",
+      "mainClass": "ReviseLL",
+      "projectName": "DSA_82c63718"
+    },
+    {
+      "type": "java",
       "name": "LinkedListClass",
       "request": "launch",
       "mainClass": "LinkedList.LinkedListClass",
