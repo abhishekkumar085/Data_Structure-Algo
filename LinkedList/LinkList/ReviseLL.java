@@ -100,6 +100,29 @@ class ReviseLL {
         return head;
     }
 
+    // Delete node from the head of th LL;
+    public static Node deleteHead(Node head) {
+        if (head == null) {
+            return null;
+        }
+
+        return head.next;
+    }
+
+    public static Node deleteTail(Node head) {
+        if (head == null || head.next == null) {
+            return null;
+        }
+
+        Node temp = head;
+        while (temp.next.next != null) {
+            temp = temp.next;
+        }
+        temp.next = null;
+        return head;
+
+    }
+
     // Printing LL
     public static void printList(Node head) {
         Node curr = head;
@@ -130,6 +153,11 @@ class ReviseLL {
         System.out.println("the length of the ll " + lengthOfLL(head));
 
         head = obj.insertNodeAtEnd(head, 60);
+        printList(head);
+
+        head = deleteHead(head);
+
+        System.out.println("After deleting head:");
         printList(head);
     }
 }
