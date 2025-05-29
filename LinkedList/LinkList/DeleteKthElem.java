@@ -68,6 +68,7 @@ public class DeleteKthElem {
         return head;
 
     }
+    // Function to remove every kth node in the
 
     public static void printList(Node head) {
         Node curr = head;

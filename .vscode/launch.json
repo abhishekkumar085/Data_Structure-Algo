@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "javaabstraction.Main",
+      "projectName": "DSA_82c63718"
+    },
+    {
+      "type": "java",
       "name": "ReviseLL",
       "request": "launch",
       "mainClass": "ReviseLL",
